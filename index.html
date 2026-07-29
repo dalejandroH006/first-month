@@ -34,12 +34,20 @@
         line-height: 1.7;
     }
 
-    .heart {
+    .heart, .flower {
         position: fixed;
-        color: #ff8fb8;
-        font-size: 20px;
+        font-size: 22px;
         animation: float 6s infinite;
         opacity: 0.7;
+        z-index: -1;
+    }
+
+    .heart {
+        color: #ff8fb8;
+    }
+
+    .flower {
+        color: #e88aaa;
     }
 
     @keyframes float {
@@ -118,7 +126,7 @@
 <body>
 
 <header>
-    <h1>Our First Month 💗</h1>
+    <h1>Our First Month, Princess Reina 💗</h1>
     <p>A little website made for my favorite person.</p>
 </header>
 
@@ -133,11 +141,35 @@
     </div>
 
     <div class="card">
+        <h2>For My Princess Reina 🌹🌷</h2>
+
+        <p>
+            Reina, I just want you to know how much I love and appreciate you. 
+            Since the day I met you, you have brought something special into my life 
+            that I never want to lose. You make me smile in ways I didn't know I could, 
+            and even the smallest moments with you mean so much to me. You are someone 
+            who makes my days better just by being yourself, and I feel so lucky that 
+            I get to have you in my life.
+        </p>
+
+        <p>
+            You have made me feel cared for, happy, and special in a way that I will 
+            always remember. I love the way you make me feel, the way we can laugh 
+            together, and the memories we are creating. You are not just my girlfriend, 
+            you are someone who means so much to me, and I hope I can keep showing you 
+            how much you are loved. You are my princess, and I’m grateful for every 
+            second I get to spend with you. ❤️
+        </p>
+    </div>
+
+
+    <div class="card">
         <h2>My Favorite Memories 🌸</h2>
 
         <div class="memory">
+
             <div class="memory-box">
-                💕
+                🌹
                 <h3>First Date</h3>
                 <p>Write your favorite moment here.</p>
             </div>
@@ -149,15 +181,18 @@
             </div>
 
             <div class="memory-box">
-                ⭐
+                💕
                 <h3>Our Little Things</h3>
                 <p>Inside jokes, songs, or special moments.</p>
             </div>
+
         </div>
     </div>
 
+
     <div class="card">
         <h2>A Message For You 💌</h2>
+
         <p>
             I’m so grateful that I get to call you mine.
             I hope this is only the beginning of many more months,
@@ -167,37 +202,50 @@
         <button onclick="showLove()">Click Me 💖</button>
 
         <div id="message">
-            I love you so much. Happy one month ❤️
+            I love you so much Princess Reina. Happy one month ❤️🌹🌷
         </div>
     </div>
 
 </div>
 
 <footer>
-    Made with love 💗
+    Made with love for Princess Reina 💗
 </footer>
 
 
 <script>
+
 function showLove() {
     document.getElementById("message").style.display = "block";
 }
 
 
-// floating hearts
+// floating hearts and flowers
 setInterval(() => {
-    let heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "♥";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
-    document.body.appendChild(heart);
+
+    let items = ["♥", "🌹", "🌷"];
+
+    let item = document.createElement("div");
+
+    if (Math.random() > 0.5) {
+        item.className = "heart";
+    } else {
+        item.className = "flower";
+    }
+
+    item.innerHTML = items[Math.floor(Math.random() * items.length)];
+
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(item);
 
     setTimeout(() => {
-        heart.remove();
+        item.remove();
     }, 7000);
 
 }, 500);
+
 </script>
 
 </body>
