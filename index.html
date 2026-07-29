@@ -1,561 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our First Month ❤️</title>
-</head>
-<body style="background:pink; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; font-family:Arial, sans-serif;">
-    <div style="text-align:center;">
-        <h1>❤️ Happy 1 Month! ❤️</h1>
-        <p>This is our special website.</p>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Hero
+↓
+Our Story
+↓
+About You
+↓
+Things I Love About You
+↓
+Favorite Memories
+↓
+A Letter to You
+↓
+Countdown to Many More Months
+<section id="hero">
+    <h1>Happy One Month, Reina ❤️</h1>
 
-<title>For My Princess Reina ❤️</title>
+    <p>
+        One month down, and somehow you've already become one of the most
+        important people in my life.
+    </p>
 
-<style>
+    <a href="#story">Our Story ↓</a>
+</section>
+<section id="story">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Georgia", serif;
-}
-
-body {
-    background: linear-gradient(135deg, #ffd6e7, #fff0f5);
-    color: #5a2035;
-    overflow-x: hidden;
-}
-
-/* floating hearts */
-
-.heart {
-    position: fixed;
-    bottom: -20px;
-    color: #ff5c8a;
-    animation: float 8s linear infinite;
-    opacity: .7;
-    font-size: 25px;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    100% {
-        transform: translateY(-110vh) rotate(360deg);
-    }
-}
-
-
-/* welcome screen */
-
-.hero {
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:25px;
-}
-
-
-.hero h1 {
-    font-size:45px;
-    color:#c2185b;
-    animation: fade 2s;
-}
-
-.hero p {
-    margin-top:20px;
-    font-size:22px;
-}
-
-
-button {
-    margin-top:35px;
-    padding:15px 35px;
-    border:none;
-    border-radius:40px;
-    background:#d81b60;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-    box-shadow:0 5px 15px #d81b6080;
-}
-
-
-button:hover {
-    transform:scale(1.05);
-}
-
-
-section {
-    padding:60px 25px;
-    text-align:center;
-}
-
-
-.card {
-    background:white;
-    border-radius:25px;
-    padding:30px;
-    margin:25px auto;
-    max-width:600px;
-    box-shadow:0 10px 30px #0002;
-}
-
-
-h2 {
-    color:#c2185b;
-    margin-bottom:20px;
-}
-
-
-.letter {
-    font-size:20px;
-    line-height:1.8;
-}
-
-
-.flower {
-    font-size:50px;
-    margin:10px;
-}
-
-
-.counter {
-    font-size:25px;
-    font-weight:bold;
-    color:#d81b60;
-}
-
-
-.hidden {
-    display:none;
-}
-
-
-@keyframes fade {
-    from {
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to {
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<div class="hero">
-
-<h1>
-For My Princess Reina 👑❤️
-</h1>
+<h2>Our Story</h2>
 
 <p>
-I made this little place just for you...
+June 29th wasn't just another day on the calendar. It became the day our story
+officially began. Looking back now, it's crazy to think how one month could be
+filled with so many memories. Every conversation, every laugh, every moment
+we've shared has made this month something I'll never forget.
 </p>
 
 <p>
-🌷 Because someone as special as you deserves something special 🌹
+This isn't about how long we've been together. It's about how much happiness,
+comfort, and love you've brought into my life in such a short amount of time.
+You've made ordinary days feel special just by being part of them.
 </p>
-
-
-<button onclick="start()">
-Open Your Surprise ❤️
-</button>
-
-
-</div>
-<!-- Surprise Content -->
-
-<div id="content" class="hidden">
-
-
-<section>
-
-<div class="card">
-
-<h2>
-🌷 A Message For My Princess 🌷
-</h2>
-
-
-<div class="letter">
-
-<p>
-Dear Reina ❤️,
-</p>
-
-<br>
-
-<p>
-I wanted to make something special for you because you are someone who deserves more than just a normal message.
-</p>
-
-<br>
-
-<p>
-These first weeks with you have been something I truly appreciate. Every conversation, every laugh, and every little moment with you means more to me than you probably realize.
-</p>
-
-<br>
-
-<p>
-You are my Princess, and I hope you always remember how special you are to me. Your smile, your kindness, and the way you make me happy are things I never want to take for granted.
-</p>
-
-<br>
-
-<p>
-I know we may not have a huge collection of pictures together yet, but that just means we have so many more memories waiting for us to create.
-</p>
-
-<br>
-
-<p>
-Just like flowers need time to grow, I want us to keep growing together. 🌷🌹
-</p>
-
-<br>
-
-<p>
-Thank you for being you, Reina.
-</p>
-
-<br>
-
-<p>
-Happy first month ❤️
-</p>
-
-<br>
-
-<p>
-- Diego ❤️
-</p>
-
-
-</div>
-
-</div>
 
 </section>
+<section id="about">
 
-
-
-
-<section>
-
-<div class="card">
-
-<h2>
-🌹 Our Time Together 🌹
-</h2>
-
+<h2>About You</h2>
 
 <p>
-Since June 29th, every second has been another moment I get to be grateful for.
+If someone asked me to describe you, the first thing I'd say is that you have
+one of the kindest hearts I've ever known. You're caring, thoughtful, funny,
+beautiful, and somehow you always know how to make the people around you feel
+important. Whether we're talking for hours or just checking in during the day,
+being with you always feels easy.
 </p>
 
-
-<br>
-
-
-<div class="counter" id="timer">
-
-Counting our time...
-</div>
-
-
-</div>
+<p>
+One of the things I admire most about you is how genuine you are. You make me
+smile without even trying, you encourage me to be a better person, and you've
+shown me more patience than I probably deserve sometimes. Thank you for loving
+me, believing in me, and reminding me every day why I chose you.
+</p>
 
 </section>
+<section id="love">
 
+<h2>Things I Love About You</h2>
 
-
-
-<section>
-
-<div class="card">
-
-<h2>
-🌷 Flowers For My Princess 🌷
-</h2>
-
-
-<div class="flower">
-🌷 🌹 🌷
-</div>
-
-
-<p>
-Tulips because they remind me of something beautiful and unique.
-</p>
-
-<br>
-
-<p>
-Roses because they represent the love and appreciation I have for you.
-</p>
-
-
-<div class="flower">
-🌹 🌷 🌹
-</div>
-
-
-</div>
+<div class="card">Your smile</div>
+<div class="card">Your laugh</div>
+<div class="card">Your kindness</div>
+<div class="card">How patient you are</div>
+<div class="card">The way you care about people</div>
+<div class="card">Your beautiful eyes</div>
+<div class="card">Every late-night conversation</div>
+<div class="card">How safe I feel with you</div>
 
 </section>
+<section id="memories">
 
+<h2>Favorite Memories</h2>
 
-
-
-
-<section>
-
-<div class="card">
-
-<h2>
-❤️ One More Thing...
-</h2>
-
-
-<p>
-No matter how many days pass, I hope you always know that you are important to me.
-</p>
-
-<br>
-
-<button onclick="surprise()">
-Click For Your Final Surprise 💝
-</button>
-
-
-<div id="final" class="hidden">
-
-<br><br>
-
-<h2>
-👑 Reina, You Are My Favorite Person ❤️
-</h2>
-
-<p>
-Thank you for being part of my life.
-</p>
-
-<p>
-I can't wait to make more memories with you.
-</p>
-
-<br>
-
-<div style="font-size:50px;">
-❤️🌷🌹❤️
-</div>
-
-
-</div>
-
-
-</div>
+<ul>
+<li>Every late-night conversation.</li>
+<li>Every good morning and good night text.</li>
+<li>Our first kiss.</li>
+<li>The little moments that made us laugh.</li>
+<li>Every time we've spent together.</li>
+</ul>
 
 </section>
+<section id="letter">
 
+<h2>A Letter To You</h2>
 
-</div>
+<p>
+Happy one month, princess.
 
+Thank you for making this past month one of the happiest times of my life.
+Thank you for every conversation, every smile, every laugh, and every moment
+you've shared with me. You make ordinary days feel exciting, and just hearing
+from you can make my day so much better.
 
+I know we're still at the beginning of our journey, but I already know this is
+something I want to keep building with you. I can't wait to see what the future
+holds, to make more memories together, and to celebrate many more months by
+your side.
 
+No matter what happens, I hope you always remember how appreciated, admired,
+and loved you are.
 
+Happy one month.
 
-<script>
+I love you. ❤️
+</p>
 
+</section>
+<footer>
 
-function start(){
+<p>
+June 29, 2026 • The beginning of our story ❤️
+</p>
 
-document.querySelector(".hero").style.display="none";
-
-document.getElementById("content").classList.remove("hidden");
-
-createHearts();
-
-}
-
-
-
-
-
-function surprise(){
-
-document.getElementById("final").classList.remove("hidden");
-
-confetti();
-
-}
-
-
-
-
-
-function createHearts(){
-
-setInterval(()=>{
-
-
-let heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤️";
-
-heart.style.left=Math.random()*100+"%";
-
-heart.style.animationDuration=(5+Math.random()*5)+"s";
-
-document.body.appendChild(heart);
-
-
-setTimeout(()=>{
-
-heart.remove();
-
-},8000);
-
-
-
-},500);
-
-
-}
-
-
-
-
-function updateTimer(){
-
-
-let startDate=new Date("June 29, 2026 00:00:00");
-
-let now=new Date();
-
-
-let difference=now-startDate;
-
-
-
-let days=Math.floor(difference/(1000*60*60*24));
-
-let hours=Math.floor((difference/(1000*60*60))%24);
-
-let minutes=Math.floor((difference/(1000*60))%60);
-
-let seconds=Math.floor((difference/1000)%60);
-
-
-
-document.getElementById("timer").innerHTML=
-
-days+" Days ❤️ "+
-
-hours+" Hours ❤️ "+
-
-minutes+" Minutes ❤️ "+
-
-seconds+" Seconds";
-
-
-}
-
-
-setInterval(updateTimer,1000);
-
-updateTimer();
-
-
-
-
-
-function confetti(){
-
-
-for(let i=0;i<80;i++){
-
-
-let piece=document.createElement("div");
-
-
-piece.innerHTML="❤️";
-
-
-piece.style.position="fixed";
-
-piece.style.left=Math.random()*100+"%";
-
-piece.style.top="-20px";
-
-piece.style.fontSize="25px";
-
-piece.style.animation="fall 3s linear";
-
-
-document.body.appendChild(piece);
-
-
-setTimeout(()=>{
-
-piece.remove();
-
-},3000);
-
-
-}
-
-
-}
-
-
-</script>
-
-
-
-<style>
-
-@keyframes fall{
-
-to{
-
-transform:translateY(110vh) rotate(360deg);
-
-}
-
-}
-
-</style>
-
-
-</body>
-
-</html>
+</footer>
