@@ -3,250 +3,548 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our First Month 💗</title>
+
+<title>For My Love 💗</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: "Poppins", "Segoe UI", sans-serif;
-        background: linear-gradient(135deg, #ffd6e7, #ffeaf2);
-        color: #6b3b4d;
-        text-align: center;
-        overflow-x: hidden;
-    }
 
-    header {
-        padding: 60px 20px 30px;
-    }
+body {
+    margin: 0;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffd1e3, #ffeaf3);
+    color: #6b3b4d;
+    text-align: center;
+    overflow-x: hidden;
+}
 
-    h1 {
-        font-size: 3rem;
-        color: #d85d8c;
-        margin-bottom: 10px;
-    }
 
-    h2 {
-        color: #c94f7c;
-    }
+/* Header */
 
-    p {
-        font-size: 1.1rem;
-        line-height: 1.7;
-    }
+header {
+    padding: 60px 20px 30px;
+}
 
-    .heart, .flower {
-        position: fixed;
-        font-size: 22px;
-        animation: float 6s infinite;
-        opacity: 0.7;
-        z-index: -1;
-    }
+h1 {
+    font-size: 3rem;
+    color: #d85d8c;
+    text-shadow: 0 0 15px #ffb6d2;
+}
 
-    .heart {
-        color: #ff8fb8;
-    }
+h2 {
+    color: #c94f7c;
+}
 
-    .flower {
-        color: #e88aaa;
-    }
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
 
-    @keyframes float {
-        0% {
-            transform: translateY(100vh) rotate(0deg);
-            opacity: 0;
-        }
-        20% {
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(-10vh) rotate(360deg);
-            opacity: 0;
-        }
-    }
 
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
-    }
+/* Floating items */
 
-    .card {
-        background: rgba(255,255,255,0.7);
-        border-radius: 25px;
-        padding: 30px;
-        margin: 25px 0;
-        box-shadow: 0 10px 25px rgba(216,93,140,0.15);
-        backdrop-filter: blur(8px);
-    }
+.floating {
+    position: fixed;
+    bottom: -50px;
+    animation: float 7s linear infinite;
+    opacity: .8;
+    z-index: -1;
+}
 
-    .memory {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+@keyframes float {
 
-    .memory-box {
-        background: #fff0f6;
-        border-radius: 20px;
-        width: 220px;
-        padding: 20px;
-    }
+0% {
+    transform: translateY(0) rotate(0deg);
+    opacity:0;
+}
 
-    button {
-        background: #e879a6;
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        border-radius: 30px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+20% {
+    opacity:1;
+}
 
-    button:hover {
-        background: #d85d8c;
-        transform: scale(1.05);
-    }
+100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity:0;
+}
 
-    #message {
-        margin-top: 20px;
-        font-size: 1.3rem;
-        color: #d85d8c;
-        display: none;
-    }
+}
 
-    footer {
-        padding: 30px;
-        font-size: 0.9rem;
-    }
+
+/* Cards */
+
+.container {
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+
+.card {
+
+    background:rgba(255,255,255,.75);
+    border-radius:30px;
+    padding:35px;
+    margin:30px 0;
+
+    box-shadow:
+    0 10px 30px rgba(216,93,140,.2);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+/* Buttons */
+
+button {
+
+    background:#e879a6;
+    border:none;
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:40px;
+
+    margin:10px;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+button:hover {
+
+    transform:scale(1.1);
+    background:#d85d8c;
+
+}
+
+
+/* Hidden messages */
+
+.hidden {
+
+display:none;
+
+}
+
+
+.message {
+
+margin-top:20px;
+
+font-size:1.2rem;
+
+color:#d85d8c;
+
+}
+
+
+/* Memories */
+
+
+.memory {
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+
+}
+
+
+.memory-box {
+
+background:#fff0f6;
+
+border-radius:25px;
+
+padding:20px;
+
+width:220px;
+
+box-shadow:0 5px 15px #ffc1d8;
+
+}
+
+
+/* Heart explosion */
+
+.big-heart {
+
+position:fixed;
+
+font-size:40px;
+
+animation:explode 2s forwards;
+
+}
+
+
+@keyframes explode {
+
+0% {
+transform:scale(0);
+}
+
+100% {
+
+transform:
+translate(
+calc(-200px + 400px * random()),
+-500px
+)
+scale(2);
+
+opacity:0;
+
+}
+
+}
+
+
+footer {
+
+padding:30px;
+
+}
+
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
-    <h1>Our First Month, Princess Reina 💗</h1>
-    <p>A little website made for my favorite person.</p>
+
+<h1>Our First Month 💗</h1>
+
+<p>
+For my Princess, my babe, my love, mi niña, mi amor ❤️
+</p>
+
 </header>
+
+
 
 <div class="container">
 
-    <div class="card">
-        <h2>One Month With You ✨</h2>
-        <p>
-            This month has been full of smiles, laughs, and memories I never want to forget.
-            Thank you for making my days brighter and my heart happier.
-        </p>
-    </div>
 
-    <div class="card">
-        <h2>For My Princess Reina 🌹🌷</h2>
+<div class="card">
 
-        <p>
-            Reina, I just want you to know how much I love and appreciate you. 
-            Since the day I met you, you have brought something special into my life 
-            that I never want to lose. You make me smile in ways I didn't know I could, 
-            and even the smallest moments with you mean so much to me. You are someone 
-            who makes my days better just by being yourself, and I feel so lucky that 
-            I get to have you in my life.
-        </p>
+<h2>One Month With You ✨</h2>
 
-        <p>
-            You have made me feel cared for, happy, and special in a way that I will 
-            always remember. I love the way you make me feel, the way we can laugh 
-            together, and the memories we are creating. You are not just my girlfriend, 
-            you are someone who means so much to me, and I hope I can keep showing you 
-            how much you are loved. You are my princess, and I’m grateful for every 
-            second I get to spend with you. ❤️
-        </p>
-    </div>
+<p>
+
+Reina, I just want you to know how grateful I am that I got the chance to meet you.
+This first month with you has been full of smiles, laughs, and moments that I never want
+to forget. You have brought so much happiness into my life just by being yourself.
+
+</p>
 
 
-    <div class="card">
-        <h2>My Favorite Memories 🌸</h2>
+<p>
 
-        <div class="memory">
+My love, you have made me feel special in a way that I will always appreciate.
+You make my days better, you make me smile without even trying, and you remind me
+how lucky I am to have someone like you in my life.
 
-            <div class="memory-box">
-                🌹
-                <h3>First Date</h3>
-                <p>Write your favorite moment here.</p>
-            </div>
-
-            <div class="memory-box">
-                🌷
-                <h3>Your Smile</h3>
-                <p>Something you love about her.</p>
-            </div>
-
-            <div class="memory-box">
-                💕
-                <h3>Our Little Things</h3>
-                <p>Inside jokes, songs, or special moments.</p>
-            </div>
-
-        </div>
-    </div>
+</p>
 
 
-    <div class="card">
-        <h2>A Message For You 💌</h2>
+<p>
 
-        <p>
-            I’m so grateful that I get to call you mine.
-            I hope this is only the beginning of many more months,
-            memories, and adventures together.
-        </p>
+I hope you always remember how important you are to me. You are not just someone I love,
+you are someone who makes my life brighter. Thank you for being my Princess, my mi amor,
+and the person who makes my heart happy. ❤️
 
-        <button onclick="showLove()">Click Me 💖</button>
+</p>
 
-        <div id="message">
-            I love you so much Princess Reina. Happy one month ❤️🌹🌷
-        </div>
-    </div>
 
 </div>
 
+
+
+
+<div class="card">
+
+<h2>Our Little Love Story 🌹🌷</h2>
+
+
+<button onclick="showStory()">
+Open Our Story 💌
+</button>
+
+
+<div id="story" class="hidden message">
+
+The day I met you was the start of something really special.
+Every laugh, every conversation, and every memory with you means more than you know.
+I can't wait for all the moments we still have ahead of us. 💗
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>Reasons I Love You ❤️</h2>
+
+
+<button onclick="reason()">
+Tap For A Reason 💕
+</button>
+
+
+<div id="reason" class="message"></div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>My Favorite Memories 🌸</h2>
+
+
+<div class="memory">
+
+
+<div class="memory-box">
+
+🌹
+
+<h3>Your Smile</h3>
+
+<p>
+One of my favorite things in the world.
+</p>
+
+</div>
+
+
+
+<div class="memory-box">
+
+🌷
+
+<h3>Your Heart</h3>
+
+<p>
+The way you care makes you special.
+</p>
+
+</div>
+
+
+
+<div class="memory-box">
+
+💗
+
+<h3>Us</h3>
+
+<p>
+Every little moment together matters.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<h2>A Surprise For You 💖</h2>
+
+
+<button onclick="surprise()">
+Tap Me Mi Amor 🌹
+</button>
+
+
+<div id="surprise" class="hidden message">
+
+I love you so much, babe. Happy one month ❤️
+You are my favorite person and I hope I get to keep making memories with you.
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
 <footer>
-    Made with love for Princess Reina 💗
+
+Made with love for my Princess 💗🌷🌹
+
 </footer>
+
+
+
+
 
 
 <script>
 
-function showLove() {
-    document.getElementById("message").style.display = "block";
+
+function showStory(){
+
+document.getElementById("story").style.display="block";
+
 }
 
 
-// floating hearts and flowers
-setInterval(() => {
 
-    let items = ["♥", "🌹", "🌷"];
+let reasons=[
 
-    let item = document.createElement("div");
+"Your smile makes my whole day better ❤️",
 
-    if (Math.random() > 0.5) {
-        item.className = "heart";
-    } else {
-        item.className = "flower";
-    }
+"You make me feel appreciated and loved 💗",
 
-    item.innerHTML = items[Math.floor(Math.random() * items.length)];
+"You are one of the most special people in my life 🌹",
 
-    item.style.left = Math.random() * 100 + "vw";
-    item.style.animationDuration = (3 + Math.random() * 4) + "s";
+"I love how you are always yourself 🌷",
 
-    document.body.appendChild(item);
+"You make ordinary moments feel special 💕"
 
-    setTimeout(() => {
-        item.remove();
-    }, 7000);
+];
 
-}, 500);
+
+function reason(){
+
+let random=
+reasons[Math.floor(Math.random()*reasons.length)];
+
+document.getElementById("reason").innerHTML=random;
+
+}
+
+
+
+function surprise(){
+
+document.getElementById("surprise").style.display="block";
+
+
+for(let i=0;i<20;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.className="floating";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize="30px";
+
+heart.style.animationDuration="3s";
+
+document.body.appendChild(heart);
+
+
+setTimeout(()=>{
+
+heart.remove();
+
+},3000);
+
+
+}
+
+
+}
+
+
+
+
+
+// Floating hearts, roses, tulips
+
+setInterval(()=>{
+
+
+let items=[
+
+"❤️",
+"💗",
+"💕",
+"🌹",
+"🌷",
+"✨"
+
+];
+
+
+let item=document.createElement("div");
+
+
+item.className="floating";
+
+
+item.innerHTML=
+items[Math.floor(Math.random()*items.length)];
+
+
+item.style.left=Math.random()*100+"vw";
+
+
+item.style.fontSize=
+(20+Math.random()*25)+"px";
+
+
+item.style.animationDuration=
+(4+Math.random()*5)+"s";
+
+
+document.body.appendChild(item);
+
+
+
+setTimeout(()=>{
+
+item.remove();
+
+},9000);
+
+
+
+},400);
+
+
 
 </script>
 
+
 </body>
+
 </html>
